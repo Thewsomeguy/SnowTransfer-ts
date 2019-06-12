@@ -1,7 +1,7 @@
 export interface TGuild {
   id: string,
   name: string,
-  iocn: string | null,
+  icon: string | null,
   splash: string | null,
   owner?: boolean,
   owner_id: string,
@@ -42,7 +42,7 @@ export interface TEmoji {
 }
 
 export interface TChannel {
-  Id : string,
+  id: string,
   type: 0 | 1 | 2 | 3 | 4 | 5 | 6 ,
   guild_id?: string,
   position?: number,
@@ -132,7 +132,7 @@ export interface TAuditLogEntry {
   reason: string
 }
 
-export interface TAuditLogObject { 
+export interface TAuditLogObject {
   webhooks: TWebhook[],
   users: TUser[],
   audit_log_entries: TAuditLogEntry[]
@@ -154,7 +154,7 @@ export interface TGuildEmbed {
 }
 
 export interface TInvite {
-  code: string, 
+  code: string,
   guild: TGuild,
   channel: TChannel,
   uses?: number,
@@ -162,14 +162,12 @@ export interface TInvite {
   max_age?: number,
   temporary?: boolean,
   created_at?: Date,
-  revoked?: boolean 
+  revoked?: boolean
 }
 
 export interface TVoiceRegion {
   id: string,
   name: string,
-  sample_hostname: string,
-  sample_port: number,
   vip: boolean,
   optimal: boolean,
   deprecated: boolean,
@@ -217,7 +215,7 @@ export interface TMessage {
   application?: { id: string, cover_image?: string, description: string, icon: string | null, name: string }
 }
 
-type TEmbedObject = { 
+type TEmbedObject = {
   title?: string,
   description?: string,
   url?: string,
