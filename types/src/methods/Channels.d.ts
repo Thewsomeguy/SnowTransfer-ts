@@ -182,7 +182,7 @@ declare class ChannelMethods {
      */
     editMessage(channelId: string, messageId: string, data: {
         content?: string;
-        embed: Object;
+        embed?: Object;
     } | string): Promise<TMessage>;
     /**
      * Delete a message
