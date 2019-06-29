@@ -137,6 +137,28 @@ export interface TGatewayData {
         reset_after: number;
     };
 }
+export interface TOAuthApplication {
+    description: string;
+    name: string;
+    owner: TUser;
+    team?: {
+        owner_user_id: string;
+        members: TTeamMember[];
+        id: string;
+        name: string;
+        icon?: string;
+    };
+    bot_public: boolean;
+    bot_require_code_grant: boolean;
+    id: string;
+    icon?: string;
+}
+export interface TTeamMember {
+    membership_state: number;
+    team_id: string;
+    user: TUser;
+    permissions: string[];
+}
 export interface TGuildEmbed {
     enabled: boolean;
     channel_id: string;

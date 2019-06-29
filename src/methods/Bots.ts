@@ -1,6 +1,6 @@
 import Endpoints from "../Endpoints";
 import RequestHandler from "../RequestHandler";
-import { TGatewayData } from "../LibTypes";
+import { TGatewayData, TOAuthApplication } from "../LibTypes";
 
 /**
  * Methods for interacting with bot specific endpoints
@@ -43,6 +43,10 @@ class BotMethods {
      */
     getGatewayBot(): Promise<TGatewayData> {
         return this.requestHandler.request(Endpoints.GATEWAY_BOT, 'get', 'json');
+    }
+
+    getOAuthApplication(appID?: string): Promise<TOAuthApplication> {
+        return this.requestHandler.request(Endpoints.OAUTH2_APPLICATION(appID || '@me'), 'get', 'json');
     }
 }
 

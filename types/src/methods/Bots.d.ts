@@ -1,5 +1,5 @@
 import RequestHandler from "../RequestHandler";
-import { TGatewayData } from "../LibTypes";
+import { TGatewayData, TOAuthApplication } from "../LibTypes";
 /**
  * Methods for interacting with bot specific endpoints
  */
@@ -32,6 +32,7 @@ declare class BotMethods {
      * // result should be something like {"url": "wss://gateway.discord.gg", "shards": 1}
      */
     getGatewayBot(): Promise<TGatewayData>;
+    getOAuthApplication(appID?: string): Promise<TOAuthApplication>;
 }
 /**
  * @typedef {Object} GatewayData
