@@ -32,6 +32,11 @@ declare class BotMethods {
      * // result should be something like {"url": "wss://gateway.discord.gg", "shards": 1}
      */
     getGatewayBot(): Promise<TGatewayData>;
+    /**
+     * Get the information of an OAuth application
+     * @param appID {String} - Id of the application
+     * @returns {Promise.<OAuthApplication>}
+     */
     getOAuthApplication(appID?: string): Promise<TOAuthApplication>;
 }
 /**

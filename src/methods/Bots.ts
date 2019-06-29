@@ -45,6 +45,11 @@ class BotMethods {
         return this.requestHandler.request(Endpoints.GATEWAY_BOT, 'get', 'json');
     }
 
+    /**
+     * Get the information of an OAuth application
+     * @param appID {String} - Id of the application
+     * @returns {Promise.<OAuthApplication>}
+     */
     getOAuthApplication(appID?: string): Promise<TOAuthApplication> {
         return this.requestHandler.request(Endpoints.OAUTH2_APPLICATION(appID || '@me'), 'get', 'json');
     }
