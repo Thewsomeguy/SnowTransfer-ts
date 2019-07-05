@@ -241,7 +241,7 @@ export interface TMessage {
         name: string;
     };
 }
-declare type TEmbedObject = {
+export declare type TEmbedObject = {
     title?: string;
     description?: string;
     url?: string;
@@ -294,4 +294,3 @@ export declare type PartialInputMessage = {
         file: Buffer;
     };
 };
-export {};

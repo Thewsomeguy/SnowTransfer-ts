@@ -239,7 +239,7 @@ export interface TMessage {
   application?: { id: string, cover_image?: string, description: string, icon: string | null, name: string }
 }
 
-type TEmbedObject = {
+export type TEmbedObject = {
   title?: string,
   description?: string,
   url?: string,
