@@ -365,7 +365,7 @@ class GuildMethods {
      |--------------------|----------:|
      | BAN_MEMBERS        |    always |
      */
-    async removeGuildBan(guildId: string, memberId:string, data?: { reasion: string}): Promise<void> {
+    async removeGuildBan(guildId: string, memberId:string, data?: { reason: string}): Promise<void> {
         return this.requestHandler.request(Endpoints.GUILD_BAN(guildId, memberId), 'delete', 'json', data);
     }
 

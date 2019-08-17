@@ -347,7 +347,7 @@ declare class GuildMethods {
      | BAN_MEMBERS        |    always |
      */
     removeGuildBan(guildId: string, memberId: string, data?: {
-        reasion: string;
+        reason: string;
     }): Promise<void>;
     /**
      * Get a list of roles for a guild
