@@ -275,13 +275,16 @@ declare class ChannelMethods {
      * @param {String} channelId - Id of the channel
      * @param {String} messageId - Id of the message
      * @param {String} emoji - reaction emoji
+     * @param {Number} limit - limit of how many users recieved
+     * @param {String} before - gets users before this id
+     * @param {String} after - gets users after this id
      * @returns {Promise.<User[]>} Array of [user objects](https://discordapp.com/developers/docs/resources/user#user-object)
      * @example
      * // This example uses a discord emoji
      * let client = new SnowTransfer('TOKEN');
      * let reactions = await client.channel.getReactions('channel Id', 'message Id', encodeURIComponent(':awooo:322522663304036352'));
      */
-    getReactions(channelId: string, messageId: string, emoji: string): Promise<TUser[]>;
+    getReactions(channelId: string, messageId: string, emoji: string, limit?: number, before?: string, after?: string): Promise<TUser[]>;
     /**
      * Delete all reactions from a message
      * @param {String} channelId - Id of the channel
